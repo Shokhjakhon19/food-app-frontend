@@ -1,0 +1,54 @@
+.buyurtmaTable {
+  width: 100%;
+}
+
+.buyurtmaTable tr {
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+}
+.buyurtmaTable tr th {
+  color: white;
+  background-color: rgb(66, 65, 65);
+  padding: 4px;
+  border: 1px solid white;
+}
+
+.buyurtmaTable tr td {
+  color: white;
+  background-color: rgb(66, 65, 65);
+  padding: 4px;
+  border: 1px solid white;
+}
+
+.buyurtmaTable tr td:last-child button {
+  color: white;
+  background-color: rgb(255, 0, 0);
+  width: 100%;
+  padding: 4px;
+  transition: 0.3s ease-in-out all;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.buyurtmaTable tr td:last-child button:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.hisoblash button {
+  width: 70%;
+  height: 10vh;
+  font-size: 20px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  background-color: skyblue;
+  transition: 0.3s ease-in-out all;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.hisoblash button:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}

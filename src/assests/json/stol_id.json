@@ -1,0 +1,20 @@
+{
+  "stollar": [
+    {
+      "stol_id": 1,
+      "stol_nomi": "Birinchi stol"
+    },
+    {
+      "stol_id": 2,
+      "stol_nomi": "ikkinchi stol"
+    },
+    {
+      "stol_id": 3,
+      "stol_nomi": "Uchinchi stol"
+    },
+    {
+      "stol_id": 4,
+      "stol_nomi": "To'rtinchi stol"
+    }
+  ]
+}

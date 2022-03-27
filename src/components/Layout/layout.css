@@ -1,0 +1,19 @@
+.layout {
+  max-width: 450px;
+  border: 5px solid rgb(201, 194, 194);
+  background-color: white;
+  margin: auto;
+  margin-top: 5vh;
+  height: 90vh;
+  max-height: 90vh;
+  z-index: 1;
+  position: relative;
+}
+
+.outlet {
+  overflow-y: scroll;
+  overflow-x: unset;
+  width: 100%;
+  padding: 8px;
+  height: 79vh;
+}
