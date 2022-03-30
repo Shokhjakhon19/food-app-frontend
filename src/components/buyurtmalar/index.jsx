@@ -26,7 +26,7 @@ const Buyurtmalar = () => {
   };
 
   const deleteBuyurtma = (id) => {
-    if (window.confirm("Do you want delete ?") == true) {
+    if (window.confirm(`Siz rostan ham buyurtmani o'chirib yubormoqchimisiz ?`) === true) {
       axios
         .delete(`http://localhost:8080/api/stol_${stol_id}/${id}`)
         .then((res) => {
@@ -40,7 +40,7 @@ const Buyurtmalar = () => {
     if (
       window.confirm(
         "Agar ok ni bossangiz barcha buyurtmalar o'chirib yuboriladi, rozimisiz ?"
-      ) == true
+      ) === true
     ) {
       axios
         .delete(`http://localhost:8080/api/stol_${stol_id}`)
@@ -51,36 +51,52 @@ const Buyurtmalar = () => {
     }
   };
 
+  var umumiy = 0;
+  buyurtma.forEach((element) => {
+    umumiy += Number(element.buyurtma_narxi);
+  });
+  console.log(umumiy);
+
   return (
-    <div className="container_fluid d-inline">
-      <table className="buyurtmaTable">
-        <tr>
-          <th>№</th>
-          <th>Buyurtma nomi</th>
-          <th>Soni</th>
-          <th>Narxi</th>
-          <th>bekor qilish</th>
-        </tr>
-        {buyurtma.map((item, index) => (
-          <tr key={index}>
-            <td>{index + 1}</td>
-            <td>{item.buyurtma_nomi}</td>
-            <td>{item.buyurtma_soni}</td>
-            <td>{item.buyurtma_narxi * item.buyurtma_soni} so'm</td>
-            <td>
-              <button onClick={() => deleteBuyurtma(item.id)}>
-                <BsTrash />
-              </button>
-            </td>
-          </tr>
-        ))}
-      </table>
-      <div className="d-flex justify-content-center hisoblash">
-        <button className="mt-5" onClick={() => hisoblash()}>
-          To'landi
-        </button>
-      </div>
-    </div>
+    <>
+      {buyurtma.length > 0 ? (
+        <div className="container_fluid d-inline text-center">
+          <h4>{stol_id} - stol dagi buyurtmalar</h4>
+          <table className="buyurtmaTable">
+            <tr>
+              <th>№</th>
+              <th>Buyurtma nomi</th>
+              <th>Soni</th>
+              <th>Narxi</th>
+              <th>bekor qilish</th>
+            </tr>
+            {buyurtma.map((item, index) => (
+              <tr key={index}>
+                <td>{index + 1}</td>
+                <td>{item.buyurtma_nomi}</td>
+                <td>{item.buyurtma_soni}</td>
+                <td>{item.buyurtma_narxi} so'm</td>
+                <td>
+                  <button onClick={() => deleteBuyurtma(item.id)}>
+                    <BsTrash />
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </table>
+          <h3 className="mt-5">Umumiy summa: {umumiy} so'm</h3>
+          <div className="d-flex justify-content-center hisoblash">
+            <button className="mt-5" onClick={() => hisoblash()}>
+              To'landi
+            </button>
+          </div>
+        </div>
+      ) : (
+        <div className="d-flex justify-content-center text-center">
+          <h1>{stol_id} - stolda hozir hech qanday buyurtma mavjud emas</h1>
+        </div>
+      )}
+    </>
   );
 };
 

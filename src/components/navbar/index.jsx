@@ -5,7 +5,7 @@ import "./navbar.css";
 const Navbar = () => {
   return (
     <div className="navbar">
-      <h1>S M I L E :)</h1>
+      <h1>F O O D - A P P</h1>
     </div>
   );
 };

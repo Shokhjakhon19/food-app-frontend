@@ -115,3 +115,6 @@
   opacity: 70%;
 }
 
+.maxsulotAdd button:nth-child(2) {
+  opacity: 100%;
+}

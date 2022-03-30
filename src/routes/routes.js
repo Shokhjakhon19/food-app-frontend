@@ -7,7 +7,6 @@ import Stol from "../pages/stol";
 
 import MaxsulotAdd from "../components/maxsulot/maxsulot-add";
 import Buyurtmalar from "../components/buyurtmalar";
-import Hisob from "../components/hisob";
 
 export const routes = [
   {
@@ -33,10 +32,7 @@ export const routes = [
       {
         path: "/buyurtmalar",
         element: <Buyurtmalar />,
-      },{
-        path: "/hisob",
-        element: <Hisob />,
-      },
+      }
     ],
   },
 ];
