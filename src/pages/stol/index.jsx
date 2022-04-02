@@ -13,7 +13,7 @@ const Stol = () => {
   const stol = StollarData.stollar;
   useEffect(() => {
     dispatch(SET_STOL(0));
-  }, [])
+  }, [dispatch])
   
   return (
     <div className="stol">

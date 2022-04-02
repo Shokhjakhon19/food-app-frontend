@@ -1,9 +1,21 @@
+// ====== admin router =======//
+
+import AdminLayout from "../admin/adminComonents/adminLayout";
+import AdminMaxsulotlar from "../admin/adminPages/adminMaxsulotlar";
+import AdminCategory from "../admin/adminPages/adminCategory";
+
+// ====== admin router components =======//
+
+import AdminMaxsulotEdit from "../admin/adminComonents/adminMaxsulot/edit and post";
+
+// ====== afitsant router =======//
+
 import Layout from "../components/Layout";
 import Home from "../pages/home";
 import Maxsulotlar from "../pages/maxsulotlar";
 import Stol from "../pages/stol";
 
-// ====== components =======//
+// ====== afitsant router components =======//
 
 import MaxsulotAdd from "../components/maxsulot/maxsulot-add";
 import Buyurtmalar from "../components/buyurtmalar";
@@ -32,7 +44,25 @@ export const routes = [
       {
         path: "/buyurtmalar",
         element: <Buyurtmalar />,
-      }
+      },
+    ],
+  },
+  {
+    path: "/admin",
+    element: <AdminLayout />,
+    children: [
+      {
+        index: true,
+        element: <AdminMaxsulotlar />,
+      },
+      {
+        path: "/admin/category",
+        element: <AdminCategory />,
+      },
+      {
+        path: "/admin/maxsulot/edit",
+        element: <AdminMaxsulotEdit />,
+      },
     ],
   },
 ];

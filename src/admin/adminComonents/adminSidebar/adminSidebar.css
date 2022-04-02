@@ -1,0 +1,22 @@
+.adminSidebar {
+    padding-top: 20px;
+    border-right: 1px solid rgb(154, 149, 149);
+}
+
+.sidebarLink a {
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px;
+    transition: 0.3s ease-in-out all;
+}
+
+.sidebarLink a:active {
+    background-color: rgb(177, 170, 170);
+}
+
+.sidebarLink a:hover {
+    background-color: rgb(177, 170, 170);
+    color: black;
+}
